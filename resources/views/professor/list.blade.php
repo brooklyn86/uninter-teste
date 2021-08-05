@@ -22,6 +22,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$professores->links()}}
             </div>
         </div>
     </div>

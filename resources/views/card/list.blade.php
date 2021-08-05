@@ -39,6 +39,8 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{$cards->links()}}
+                
             </div>
         </div>
     </div>
