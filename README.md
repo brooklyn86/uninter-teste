@@ -24,7 +24,7 @@
    
    Quando o comando concluir a sua instalação rode o comando:
    ```npm run dev``` ou ```yarn dev```
-   esse comando vai efetuar o build dos componentes do vue js
+   esse comando vai efetuar o build dos componentes
    
  ## Copiando o arquivo .env
  
