@@ -17,22 +17,39 @@
          @if (Route::has('login'))
               
               @auth
-                  <li><a href="{{ url('/home') }}">Home</a></li>
+                  <li><a href="{{ url('/') }}">Home</a></li>
               @else
               <li><a href="{{ route('login') }}">Login</a></li>
-
               @if (Route::has('register'))
-                  <li><a href="{{ route('register') }}">Register</a></li>
+                  <li><a href="{{ route('register') }}">Cadastro</a></li>
               @endif
               @endauth
 
           @endif
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Card<span class="caret"></span></a>
           <ul class="dropdown-menu">
-        
+            <li><a href="{{ route('lista.cards') }}">Listagem de cards</a></li>
+            <li><a href="{{ route('cadastro.card') }}">Cadastrar novo cards</a></li>
           </ul>
         </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professor<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ route('lista.professores') }}">Listagem de Professores</a></li>
+            <li><a href="{{ route('professor.cadastro') }}">Cadastrar novo Professor</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ route('lista.cursos') }}">Listagem de cursos</a></li>
+            <li><a href="{{ route('curso.cadastro') }}">Cadastrar novo curso</a></li>
+          </ul>
+        </li>
+        @auth
+          <li><a href="{{ route('logout') }}">Sair</a></li>
+        @endauth
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
