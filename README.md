@@ -2,60 +2,56 @@
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Requisitos:
+    * PHP >= 7.3
+    * Composer
+    * NPM ou Yarn
+    
+## Instalação: 
+   Para efetuar a instalação dessa aplicação você deve efetuar o clone desse repositorio,
+   logo apos você deve rodar o comando no seu terminal dentro da pasta do projeto:
+    
+   ```composer install```
+   
+   Quando concluir a instalação das dependencia via composer deve se rodar o comando 
+   ```npm install``` ou ```yarn install```
+   esse comando será responsavel por instalar as dependencias do vue js
+   
+   Quando o comando concluir a sua instalação rode o comando:
+   ```npm run dev``` ou ```yarn dev```
+   esse comando vai efetuar o build dos componentes
+   
+ ## Copiando o arquivo .env
+ 
+ Para que a apliação funcione normalmente você deve copiar o arquivo .env.example e renomear para .env
+ 
+ 
+ ## Adicionando o banco de dados 
+ Abra o seu arquivo .env com o seu editor de textos e procure as seguintes linhas 
+ 
+ * DB_CONNECTION=mysql
+ * DB_HOST=127.0.0.1
+ * DB_PORT=3306
+ * DB_DATABASE=teste_php
+ * DB_USERNAME=root
+ * DB_PASSWORD=
+ 
+ troqueas para as informações correspondentes ao seu banco de dados
+ 
+ ## Rodando as migrations 
+ 
+ Para criar as tabelas do banco de dados basta rodar o comando ```php artisan migrate``` que a aplicação automaticamente irá criar as tabelas no banco de dados
+ 
+ ##Criando uma nova Key de criptografia
+   a aplicação laravel ela utiliza uma chave para a criptografia de algumas informações sem essa chave a sua aplicação não irá funcionar! para criar uma nova chave basta rodar o comando em seu terminal: ```php artisan key:generate```
+   
+  ## Rodando a aplicação 
+  
+  Rode o em seu terminal o comando: ```php artisan serve``` e a sua aplicação irá funcionar na porta 8000 do seu computador, para acesar basta acessar a seguinte url em seu navegador: http://localhost:8000
+ 
+ 
